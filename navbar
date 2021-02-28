@@ -1,0 +1,89 @@
+<!-- Navigation Bar -->
+
+    <nav class="navbar">
+      <a href="#"><img class="logo" src="/Images/logo.png" alt="logo" /></a>
+      <div class="dropdown">
+        <div class="product">
+          <button>Product<img class="arrow" src="/Images/arrow-down.png" alt=""></button>
+          
+          <ul>
+            <li><a href="">Platforms</a></li>
+            <li><a href="">Templates</a></li>
+            <li><a href="">Securities</a></li>
+            <li><a href="">Success Stories</a></li>
+            <li><a href="">Customer Reviews</a></li>
+            <li><a href="">Product Updates</a></li>
+          </ul>
+        </div>
+        <button><a href="#" class="pricing">Pricing</a></button>
+      </div>
+    </nav>
+
+a, button {
+    font-family: "Noto Sans", "Open Sans", sans-serif;
+}
+
+.dropdown, .navbar {
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+    width: 80%;
+    margin: auto;
+}
+
+.product {
+    position: relative;
+}
+
+.product ul {
+    position: absolute;
+    margin-top: 10px;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+}
+
+.product a {
+    color: #262f4d;
+    text-decoration: none;
+}
+
+.product li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 14px;
+}
+
+.dropdown button, .pricing {
+    background: none;
+    border: none;
+    color: #262f4d;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.dropdown button:hover, .pricing:hover, .product li:hover {
+    color: #4970ff;
+}
+
+.product button:focus + ul {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+}
+
+.arrow {
+    width: 20px;
+    color: #262f4d;
+}
